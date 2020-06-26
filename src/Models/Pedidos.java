@@ -55,6 +55,7 @@ public class Pedidos {
     public void criarPedidos(String descricao, double valor, String estado, String pagamentos){
         this.descricao = descricao;
         this.valor = valor;
+        System.out.println("1- Nova venda");
         if (estado == "preparacao"){
             System.out.println("O pedido esta: " +Estado.PREPARACAO);
         } else {
@@ -82,15 +83,18 @@ public class Pedidos {
 
     public void alterarPedidos(String estado){
        // verificar senha
-        this.setEstado(this.getEstado());
+        System.out.println("3- Alterar pedidos");
+       this.setEstado(this.getEstado());
+        System.out.println("o novo estado é: "+getEstado());
     }
 
     public void verificarPedidos(){
-        System.out.println("Informaçoes gerais do pedido:");
+        System.out.println("2- Verificar pedidos");
         System.out.println("o id do pedido é: " +this.geradorId());
         System.out.println("O valor do pedido é: "+this.getValor());
-        System.out.println("A forma de pagamento é: "+this.getPegamentos());
-        System.out.println("O estado do pedido é: "+this.getEstado());
+        System.out.println("A forma de pagamento é: "+getPegamentos());
+        System.out.println("O estado do pedido é: "+getEstado());
     }
+
 
 }
