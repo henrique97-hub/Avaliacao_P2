@@ -1,6 +1,10 @@
 package Models;
 
 import java.util.Random;
+/**
+ * @author Henrique Silva Godoy - RA: 16.01147-3
+ * Classe que permite criar os pedidos juntamente com seus métodos.
+ */
 
 public class Pedidos {
         protected String id;
@@ -11,12 +15,11 @@ public class Pedidos {
 
 // metodos especiais
 
-    public String getId() {
-        return id;}
-
-    public void setId(String id) {
-        this.id = id;}
-
+    /**
+     * Estes sao os metodos especiais, responsaveis por ATRIBUIR ou RESGATAR
+     * paramentros dos metodos (publicos/privados) cirados logo em sequencia
+     * @return
+     */
     public String getDescricao() {
         return descricao; }
 
@@ -42,7 +45,10 @@ public class Pedidos {
         this.pegamentos = pegamentos; }
 
 
-    // metodos publicos e privados
+    /**
+     * Metodos privado que gera um id
+     * @return retorna o id de cada pedido
+     */
 
     private String geradorId(){
     Random random = new Random();
@@ -52,6 +58,16 @@ public class Pedidos {
     return idGerado;}
 
     // verificar senha
+
+    /**
+     * Metodo que cira o pedido
+     * @param descricao - define qual é a comida que o cliente quer (tipo String)
+     * @param valor - define o valor que o cliente terá que pagar(tipo Double)
+     * @param estado - define o estado que o pedido esta
+     * @param pagamentos - define os tipos de pagamentos aceitos, sendo eles: dinheiro, debito, credito,
+     *                   va = "vale alimentaçao" e vr = "vale refeição"
+     *
+     */
     public void criarPedidos(String descricao, double valor, String estado, String pagamentos){
         this.descricao = descricao;
         this.valor = valor;
@@ -81,6 +97,11 @@ public class Pedidos {
         }
     }
 
+    /**
+     *
+     * @param estado
+     * parametro que define o tipo de estado
+     */
     public void alterarPedidos(String estado){
        // verificar senha
         System.out.println("3- Alterar pedidos");
@@ -88,6 +109,11 @@ public class Pedidos {
         System.out.println("o novo estado é: "+getEstado());
     }
 
+
+    /**
+     * Esse é um metodo publico, responsavel por verificar os pedidos que ja
+     * foram feitos
+     */
     public void verificarPedidos(){
         System.out.println("2- Verificar pedidos");
         System.out.println("o id do pedido é: " +this.geradorId());

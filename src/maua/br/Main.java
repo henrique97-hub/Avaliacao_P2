@@ -1,9 +1,12 @@
-/* Henrique Godoy
- RA: 16.01147-3 */
-
 package maua.br;
 
 import Models.Usuario;
+/**
+ * Classe ponto de entrada da aplicação base.<br>
+ * Atraves dela é possivel iniciar o projeto proposto para a avaliação P1
+ * @author Henrique Silva Godoy - RA: 16.01147-3
+ * @since 26/06/2020 - Ultimas modificações nesta data
+ */
 
 public class Main {
     public static void main(String[] args) {
@@ -22,7 +25,9 @@ public class Main {
     }
 
 
-
+/**
+ * Tentei fazer o menu pelo switch, mas nao consegui "rodar"
+ */
        /*switch (menu) {
             case 1:
                 System.out.println("Nova venda");
